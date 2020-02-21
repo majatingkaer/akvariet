@@ -63,9 +63,72 @@
       justify-content: center;
   }
 
+  nav {
+      background-color: black;
+  }
 
+  h1 {
+      font-family: titling-gothic-fb-wide, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: white;
+      font-size: 5vw;
+      padding-top: 20px;
+  }
 
   /* H1 OG H2 STYLING HER ... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   @media only screen and (min-width:600px) {
 
@@ -75,12 +138,7 @@
           flex-wrap: wrap;
       }
 
-      h1 {
-          font-family: titling-gothic-fb-wide, sans-serif;
-          font-weight: 400;
-          font-style: normal;
-          color: white;
-      }
+
 
       button {
           font-family: titling-gothic-fb-narrow, sans-serif;
