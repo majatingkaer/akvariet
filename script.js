@@ -1,0 +1,3 @@
+const endpoint = "";
+
+let oversigt = [];
