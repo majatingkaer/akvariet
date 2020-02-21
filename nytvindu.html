@@ -8,38 +8,34 @@
 </head>
 
 <body>
-    <nav>
-        <button class="filter valgt" data-kategori="alle">Alle fisk</button>
-        <button class="filter" data-kategori="blue">Blå fisk</button>
-        <button class="filter" data-kategori="yellow">Gule fisk</button>
-        <button class="filter" data-kategori="orange">Orange fisk</button>
-        <button class="filter" data-kategori="white">Hvide fisk</button>
-        <button class="filter" data-kategori="red">Røde fisk</button>
-        <button class="filter" data-kategori="andet">Andre farver</button>
-    </nav>
 
-    <section class="data-container">
+    <section id="header">
+        <img src="foto/LOGO.svg" alt="header">
+        <h1>Portræt <br>Akvariet</h1>
     </section>
-    <template>
-        <article>
-            <h2></h2>
-            <img src="" alt="">
-            <p class="kategori"></p>
-            <p class="pris"></p>
-            <p class="kort"></p>
-            <p class="lang"></p>
-            <p class="oprindelse"></p>
-        </article>
-    </template>
+
+
+    <section id="data-container">
+        <button>Pil her...</button>
+        <template>
+            <article>
+                <h2></h2>
+                <img src="" alt="">
+                <p class="navn"></p>
+                <p class="beskrivelse"></p>
+                <p class="fotograf"></p>
+            </article>
+        </template>
+    </section>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const filter = urlParams.get("id");
 
-
-
-
         const link = "https://spreadsheets.google.com/feeds/list/1RvB2f2NnVM1-vxvO-tpdybufvkeX4DuF4jCgHjtVTJE/od6/public/values?alt=json";
+        let fisk = [];
+        const info = document.querySelector("#data-container");
+
         //   let filter = "alle";
         //const container = document.querySelector("#data-container");
         //const fiskTemplate = document.querySelector("template");
@@ -54,26 +50,23 @@
 
         async function loadData() {
             const response = await fetch(link);
-            fisker = await response.json();
-            console.log(fisker);
-            visFisker();
+            fisk = await response.json();
+            console.log(fisk);
+            visFisk();
         }
 
-        function visFisker() {
-
-
-            fisker.feed.entry.forEach(fisk => {
-                if (filter == "alle" || filter == fisk.gsx$id.$t) {
-
+        function visFisk() {
+            fisk.feed.entry.forEach(fisk => {
+                if (/*filter == "alle" || */filter == fisk.gsx$id.$t) {
                     console.log(fisk);
-                    //                    let klon = fiskTemplate.cloneNode(true).content;
-                    //                    klon.querySelector("img").src = `small/${fisk.gsx$billede.$t}_sm.jpg`;
-                    //                    klon.querySelector("article").addEventListener("click", () => {
-                    //                        visDetalje(fisk)
-                    //
-                    //                    });
-                    //                    container.appendChild(klon);
+                    info.querySelector("img").src = `large/${fisk.gsx$billede.$t}.jpg`;
+                    info.querySelector(".navn").textContent = fisk.gsx$navn.$t;
+                    info.querySelector(".beskrivelse").textContent = fisk.gsx$beskrivelse.$t;
+                    info.querySelector(".fotograf").textContent = fisk.gsx$fotograf.$t;
                 }
+            })
+            info.querySelector("button").addEventListener("click", () => {
+                history.back();
             })
         }
     </script>
