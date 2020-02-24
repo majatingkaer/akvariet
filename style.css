@@ -33,23 +33,33 @@
       background-color: rgba(5, 5, 5, 0.5);
       z-index: 10;
       overflow: scroll;
+
   }
 
   #detalje img {
       max-width: 35vw;
-      margin-left: 7.5vw;
+
+      margin: 0 auto;
   }
 
   #detalje button {
-      font-size: 2rem;
+      font-size: 4rem;
       position: fixed;
+      border-radius: 5px
   }
 
-  #ret_detalje {
-      background-color: white;
-      width: 50vw;
+  #fisk_detalje {
+      background-color: black;
+      width: 80vw;
       margin: 0 auto;
       margin-top: 2vw;
+      padding: 20px;
+      border-radius: 10px;
+
+  }
+
+  #detalje .videre {
+      font-size: 1rem;
   }
 
 
@@ -102,6 +112,17 @@
       font-style: normal;
       color: white;
       font-size: 10vw;
+      padding-top: 20px;
+
+
+  }
+
+  h2 {
+      font-family: titling-gothic-fb-wide, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: white;
+      font-size: 5vw;
       padding-top: 20px;
   }
 
@@ -166,6 +187,10 @@
 
           font-size: 5vw;
 
+      }
+
+      p {
+          color: white;
       }
 
       #header img {
