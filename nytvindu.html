@@ -6,11 +6,9 @@
     <title>Portræt akvariet</title>
     <link rel="stylesheet" href="style.css">
     <style>
-
         p {
             color: white;
         }
-
     </style>
 </head>
 
@@ -23,14 +21,14 @@
 
 
     <section id="data-container">
-        <button>Pil her...</button>
-            <article>
-                <h2></h2>
-                <img src="" alt="">
-                <p class="navn"></p>
-                <p class="beskrivelse"></p>
-                <p class="fotograf"></p>
-            </article>
+        <button>←</button>
+        <article>
+            <h2></h2>
+            <img src="" alt="">
+            <p class="navn"></p>
+            <p class="beskrivelse"></p>
+            <p class="fotograf"></p>
+        </article>
 
     </section>
 
@@ -64,7 +62,7 @@
 
         function visFisk() {
             fisk.feed.entry.forEach(fisk => {
-            //console.log("vis den fisk", filter, fisk.gsx$id.$t)
+                //console.log("vis den fisk", filter, fisk.gsx$id.$t)
                 if (filter == fisk.gsx$id.$t) {
                     info.querySelector("img").src = `large/${fisk.gsx$billede.$t}.jpg`;
                     console.log("vis den fisk", fisk.gsx$navn.$t)
