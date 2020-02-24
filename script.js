@@ -24,7 +24,7 @@ function visFisker() {
     fisker.feed.entry.forEach(fisk => {
         if (filter == "alle" || filter == fisk.gsx$kategori.$t) {
             let klon = fiskTemplate.cloneNode(true).content;
-            klon.querySelector("img").src = `small/${fisk.gsx$billede.$t}_sm.jpg`;
+            klon.querySelector("img").src = `small/${fisk.gsx$billede.$t}.jpg`;
             klon.querySelector("article").addEventListener("click", () => {
                 visDetalje(fisk)
 
