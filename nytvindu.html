@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <title>Portræt akvariet</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+        p {
+            color: white;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -17,7 +24,6 @@
 
     <section id="data-container">
         <button>Pil her...</button>
-        <template>
             <article>
                 <h2></h2>
                 <img src="" alt="">
@@ -25,8 +31,9 @@
                 <p class="beskrivelse"></p>
                 <p class="fotograf"></p>
             </article>
-        </template>
+
     </section>
+
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -57,9 +64,10 @@
 
         function visFisk() {
             fisk.feed.entry.forEach(fisk => {
-                if (/*filter == "alle" || */filter == fisk.gsx$id.$t) {
-                    console.log(fisk);
+            //console.log("vis den fisk", filter, fisk.gsx$id.$t)
+                if (filter == fisk.gsx$id.$t) {
                     info.querySelector("img").src = `large/${fisk.gsx$billede.$t}.jpg`;
+                    console.log("vis den fisk", fisk.gsx$navn.$t)
                     info.querySelector(".navn").textContent = fisk.gsx$navn.$t;
                     info.querySelector(".beskrivelse").textContent = fisk.gsx$beskrivelse.$t;
                     info.querySelector(".fotograf").textContent = fisk.gsx$fotograf.$t;
