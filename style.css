@@ -30,26 +30,28 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(5, 5, 5, 0.5);
+      background-color: rgba(5, 5, 5, 0.8);
       z-index: 10;
-      overflow: scroll;
+      /*overflow: scroll;*/
   }
 
   #detalje img {
-      max-width: 35vw;
-      margin-left: 7.5vw;
+      max-width: 40vw;
   }
 
   #detalje button {
-      font-size: 2rem;
-      position: fixed;
+      font-size: 1.5rem;
   }
 
-  #ret_detalje {
-      background-color: white;
+  #fisk_detalje {
+      background-color: black;
       width: 50vw;
       margin: 0 auto;
-      margin-top: 2vw;
+      margin-top: 15vw;
+  }
+
+  #fisk_detalje h1 {
+      font-size: 1.7rem;
   }
 
 
@@ -67,12 +69,27 @@
 
   #header {
       background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 101, 1) 35%, rgba(10, 135, 161, 1) 100%);
-      height: 30vh;
+      height: 40vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding-left: 40px;
       padding-right: 40px;
+  }
+
+  h1 {
+      font-family: titling-gothic-fb-wide, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: white;
+      font-size: 2rem;
+      padding-top: 20px;
+  }
+
+  #header img {
+      padding: 2vw;
+      padding-top: 5vw;
+      max-width: 120px;
   }
 
   nav {
@@ -83,11 +100,11 @@
 
   }
 
-  #header img {
+  /*  #header img {
 
       max-width: 40vw;
       flex-wrap: wrap;
-  }
+  }*/
 
   /*GRID..*/
 
@@ -158,18 +175,20 @@
   @media only screen and (min-width:600px) {
 
       #header {
-          height: 350px;
-
+          height: 45vh;
       }
 
       h1 {
-
-          font-size: 5vw;
-
+          font-family: titling-gothic-fb-wide, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color: white;
+          font-size: 2.5rem;
       }
 
       #header img {
-          max-width: 20vw;
+          padding-top: 3vw;
+          max-width: 180px;
       }
 
       button {
@@ -180,6 +199,7 @@
           background-color: black;
           font-size: 1.4rem;
           border: 0;
+          cursor: pointer;
       }
 
       .line {
@@ -214,6 +234,35 @@
 
       article:nth-child(4n - 1) {
           grid-column: 1/3;
+      }
+
+      #detalje {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(5, 5, 5, 0.8);
+          z-index: 10;
+          /*overflow: scroll;*/
+      }
+
+      #detalje img {
+          margin-left: 8vw;
+          max-height: 400px;
+          max-width: 280px;
+      }
+
+
+      #fisk_detalje {
+          background-color: black;
+          width: 40vw;
+          margin: 0 auto;
+          margin-top: 2vw;
+      }
+
+      #fisk_detalje h1 {
+          font-size: 1.7rem;
+          margin-left: 2vw;
       }
 
   }
