@@ -4,10 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <title>Portræt akvariet</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bfj0cgy.css">
     <style>
-        p {
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #header {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 101, 1) 35%, rgba(10, 135, 161, 1) 100%);
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        h1 {
+            font-family: titling-gothic-fb-wide, sans-serif;
+            font-weight: 400;
+            font-style: normal;
             color: white;
+            font-size: 2rem;
+            padding-top: 20px;
+        }
+
+        #header img {
+            padding: 2vw;
+            padding-top: 5vw;
+            max-width: 120px;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            position: sticky;
+            font-size: 3rem;
+            margin-left: 5vw;
+        }
+
+        #data-container {
+            display: block;
+        }
+
+        p {
+            font-family: titling-gothic-fb-narrow, sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            color: whitesmoke;
+            margin-left: 5vw;
+        }
+
+        .navn {
+            font-size: 1.5rem;
+        }
+
+        .fotograf {
+            margin-top: 3rem;
+        }
+
+        #data-container img {
+            max-width: 300px;
+            margin-left: 14vw;
+        }
+
+
+        @media only screen and (min-width:600px) {
+            article {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 1000px;
+                margin: 0vw 20vw 0vw 20vw;
+            }
+
+            .foto {
+                justify-self: center;
+            }
+
+            .tekst {
+                justify-self: center;
+            }
+
+            #header {
+                height: 45vh;
+            }
+
+            h1 {
+                font-family: titling-gothic-fb-wide, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                color: white;
+                font-size: 2.5rem;
+            }
+
+            #header img {
+                padding-top: 3vw;
+                max-width: 180px;
+            }
+
+            #data-container img {
+                max-height: 500px;
+                margin: 0;
+            }
+
+        p {
+            font-family: titling-gothic-fb-narrow, sans-serif;
+            font-weight: 500;
+            color: whitesmoke;
+        }
+
+        .navn {
+            font-size: 1.8rem;
+        }
+
+        .fotograf {
+            margin-top: 10rem;
+        }
+
         }
     </style>
 </head>
@@ -23,11 +145,14 @@
     <section id="data-container">
         <button>←</button>
         <article>
-            <h2></h2>
-            <img src="" alt="">
-            <p class="navn"></p>
-            <p class="beskrivelse"></p>
-            <p class="fotograf"></p>
+            <div class=foto>
+                <img src="" alt="">
+            </div>
+            <div class="tekst">
+                <p class="navn"></p>
+                <p class="beskrivelse"></p>
+                <p class="fotograf"></p>
+            </div>
         </article>
 
     </section>
@@ -68,7 +193,7 @@
                     console.log("vis den fisk", fisk.gsx$navn.$t)
                     info.querySelector(".navn").textContent = fisk.gsx$navn.$t;
                     info.querySelector(".beskrivelse").textContent = fisk.gsx$beskrivelse.$t;
-                    info.querySelector(".fotograf").textContent = fisk.gsx$fotograf.$t;
+                    info.querySelector(".fotograf").textContent = `Fotografi af: ${fisk.gsx$fotograf.$t}`;
                 }
             })
             info.querySelector("button").addEventListener("click", () => {
