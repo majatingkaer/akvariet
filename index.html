@@ -11,21 +11,39 @@
 </head>
 
 <body>
-
     <section id="header">
-        <img src="foto/LOGO.svg" alt="header">
-        <h1>Portræt <br>Akvariet</h1>
-        <nav>
-            <div id="menuknap">☰</div>
-            <ul id="menu" class="hidden">
+        <div id="mobile_menu">
+            <nav>
+
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><button class="filter valgt" data-kategori="alle">ALLE</button></li>
+                    <li><button class="filter line" data-kategori="blue">BLÅ</button></li>
+                    <li><button class="filter line" data-kategori="orange">ORANGE</button></li>
+                    <li><button class="filter line" data-kategori="white">HVID</button></li>
+                    <li><button class="filter line" data-kategori="red">RØD</button></li>
+                    <li><button class="filter line" data-kategori="andet">ANDRE</button></li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div id="logo">
+            <img src="foto/LOGO.svg" alt="header">
+            <h1>Portræt <br>Akvariet</h1>
+        </div>
+
+        <div id="web_menu">
+            <nav>
                 <button class="filter valgt" data-kategori="alle">ALLE</button>
                 <button class="filter line" data-kategori="blue">BLÅ</button>
                 <button class="filter line" data-kategori="orange">ORANGE</button>
                 <button class="filter line" data-kategori="white">HVID</button>
                 <button class="filter line" data-kategori="red">RØD</button>
                 <button class="filter line" data-kategori="andet">ANDRE</button>
-            </ul>
-        </nav>
+            </nav>
+        </div>
+
     </section>
 
 
