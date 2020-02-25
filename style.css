@@ -32,43 +32,41 @@
   #detalje {
       position: fixed;
       top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(5, 5, 5, 0.8);
+      width: 80vw;
+      height: 100vw;
+      background-color: black;
       z-index: 10;
       overflow: scroll;
-
+      margin: 10vw;
   }
 
   #detalje img {
       max-width: 35vw;
-      margin: 0 auto;
+      margin-left: 10vw;
   }
 
   #detalje button {
-      font-size: 4rem;
+      text-align: right;
+      font-size: 2rem;
       position: fixed;
-      border-radius: 5px
-  }
-
-  #detalje img {
-      max-width: 40vw;
-  }
-
-  #detalje button {
-      font-size: 1.5rem;
-  }
-
-  #fisk_detalje {
       background-color: black;
-      width: 80vw;
-      margin: 0 auto;
-      margin-top: 2vw;
-      padding: 20px;
-      border-radius: 10px;
+      color: whitesmoke;
+      border: 0;
+      cursor: pointer;
   }
 
+  #detalje .videre {
+      font-size: 1.3rem;
+      font-family: titling-gothic-fb-wide, sans-serif;
+      margin-left: 4vw;
+      margin-top: 10vw;
+  }
 
+#detalje h2, p {
+    color: whitesmoke;
+    font-family: titling-gothic-fb-wide, sans-serif;
+    margin-left: 5vw;
+}
 
   * {
       box-sizing: border-box;
