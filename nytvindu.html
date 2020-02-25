@@ -116,21 +116,22 @@
                 margin: 0;
             }
 
-        p {
-            font-family: titling-gothic-fb-narrow, sans-serif;
-            font-weight: 500;
-            color: whitesmoke;
+            p {
+                font-family: titling-gothic-fb-narrow, sans-serif;
+                font-weight: 500;
+                color: whitesmoke;
+            }
+
+            .navn {
+                font-size: 1.8rem;
+            }
+
+            .fotograf {
+                margin-top: 10rem;
+            }
+
         }
 
-        .navn {
-            font-size: 1.8rem;
-        }
-
-        .fotograf {
-            margin-top: 10rem;
-        }
-
-        }
     </style>
 </head>
 
@@ -189,7 +190,7 @@
             fisk.feed.entry.forEach(fisk => {
                 //console.log("vis den fisk", filter, fisk.gsx$id.$t)
                 if (filter == fisk.gsx$id.$t) {
-                    info.querySelector("img").src = `large/${fisk.gsx$billede.$t}.jpg`;
+                    info.querySelector("img").src = `foto/fiskebilleder/${fisk.gsx$billede.$t}.jpg`;
                     console.log("vis den fisk", fisk.gsx$navn.$t)
                     info.querySelector(".navn").textContent = fisk.gsx$navn.$t;
                     info.querySelector(".beskrivelse").textContent = fisk.gsx$beskrivelse.$t;
@@ -200,6 +201,9 @@
                 history.back();
             })
         }
+
     </script>
 
-</body></html>
+</body>
+
+</html>
