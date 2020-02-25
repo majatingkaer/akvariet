@@ -32,13 +32,13 @@ function toggleMenu() {
         document.querySelector("#menuknap").textContent = "X";
     }
 
-    document.querySelector(".filter").addEventListener("click", hideMenu);
+    //    document.querySelector(".filter").addEventListener("click", hideMenu);
 }
 
-function hideMenu() {
-    console.log("hideMenu");
-    document.querySelector("#menu").classList.toggle("hidden");
-}
+//function hideMenu() {
+//    console.log("hideMenu");
+//    document.querySelector("#menu").classList.toggle("hidden");
+//}
 
 function visFisker() {
     container.innerHTML = "";
@@ -77,13 +77,17 @@ function visDetalje(fisk) {
 }
 
 function filtrering() {
+    document.querySelector("#menu").classList.add("hidden");
+    document.querySelector("#menu").classList.remove("overlay_menu");
+    document.querySelector("#menuknap").textContent = "☰";
     console.log("FILTER");
     filter = this.dataset.kategori;
     document.querySelectorAll(".filter").forEach(elementer => {
         elementer.classList.remove("valgt");
     })
+    console.log(this)
     this.classList.add("valgt");
-//    document.querySelector("#menu").classList.add("hidden");
+    //    document.querySelector("#menu").classList.add("hidden");
     visFisker();
 }
 //const endpoint = "";
