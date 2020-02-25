@@ -280,7 +280,7 @@
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           max-width: 1200px;
-          grid-gap: 3vw;
+          grid-gap: 2vw;
           grid-auto-flow: dense;
 
       }
@@ -292,10 +292,13 @@
 
       }
 
+      #data-container article {
+          transition: 0.8s;
+      }
 
       #data-container article:hover {
-          transition: .3s ease-out;
-          transform: scale(1.2);
+
+          transform: scale(1.15);
       }
 
 
