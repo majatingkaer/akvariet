@@ -1,5 +1,5 @@
   .valgt {
-      background-color: #a70606;
+      background-color: rgba(20, 20, 101, 1);
       color: white;
   }
 
@@ -10,7 +10,9 @@
       grid-template-columns: repeat(2, 1fr);
       max-width: 1200px;
       grid-gap: 3vw;
+
       margin: 0 auto;
+
       /*      grid-auto-flow: dense;*/
 
   }
@@ -246,14 +248,20 @@
 
       #data-container {
 
-          display: grid;
+          cursor: pointer;
 
+          display: grid;
           grid-template-columns: repeat(4, 1fr);
           max-width: 1200px;
           grid-gap: 3vw;
+      }
 
-          /*          grid-auto-flow: dense;*/
+      /*          grid-auto-flow: dense;*/
 
+
+      #data-container article:hover {
+          transition: .3s ease-out;
+          transform: scale(1.2);
       }
 
       /*
