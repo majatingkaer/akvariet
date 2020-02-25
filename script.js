@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", start);
 function start() {
     loadData();
     klikBar();
+    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
 }
 
@@ -16,6 +17,20 @@ async function loadData() {
     fisker = await response.json();
     console.log(fisker);
     visFisker();
+}
+
+function toggleMenu() {
+    console.log("toggleMenu");
+    document.querySelector("#menu").classList.toggle("hidden");
+    document.querySelector("#menu").classList.toggle("overlay_menu");
+
+    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+    if (erSkjult == true) {
+        document.querySelector("#menuknap").textContent = "☰";
+    } else {
+        document.querySelector("#menuknap").textContent = "X";
+    }
 }
 
 function visFisker() {

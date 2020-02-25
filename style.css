@@ -73,7 +73,43 @@
   /*** burger start ***/
 
 
+  .overlay_menu {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      opacity: 0.8;
 
+  }
+
+
+  .hidden {
+      /*    display: none;*/
+      /*    transform: scale(0);*/
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+
+  #menuknap {
+      display: inline-block;
+      z-index: 1;
+      float: right;
+      color: white;
+
+
+  }
+
+  #menu {
+      list-style-type: none;
+      transition: transform .3s;
+      transform-origin: top left;
+      text-align: left;
+
+  }
 
 
 
