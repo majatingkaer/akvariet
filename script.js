@@ -31,6 +31,13 @@ function toggleMenu() {
     } else {
         document.querySelector("#menuknap").textContent = "X";
     }
+
+    document.querySelector(".filter").addEventListener("click", hideMenu);
+}
+
+function hideMenu() {
+    console.log("hideMenu");
+    document.querySelector("#menu").classList.toggle("hidden");
 }
 
 function visFisker() {
@@ -76,6 +83,7 @@ function filtrering() {
         elementer.classList.remove("valgt");
     })
     this.classList.add("valgt");
+//    document.querySelector("#menu").classList.add("hidden");
     visFisker();
 }
 //const endpoint = "";

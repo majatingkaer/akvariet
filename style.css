@@ -8,6 +8,7 @@
 
   body {
       background-color: black;
+      margin: 0;
 
   }
 
@@ -88,7 +89,7 @@
       transition: 0.5s;
       opacity: 0.8;
       z-index: 100;
-      pointer-events: none;
+
       background-color: black;
       margin-top: 0;
 
