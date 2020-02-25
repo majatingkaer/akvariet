@@ -46,7 +46,7 @@ function visDetalje(fisk) {
     console.log("FISK", fisk.gsx$id.$t);
     detalje.querySelector("h2").textContent = fisk.gsx$navn.$t;
     detalje.querySelector("p").textContent = fisk.gsx$fotograf.$t;
-    detalje.querySelector("img").src = `small/${fisk.gsx$billede.$t}_sm.jpg`;
+    detalje.querySelector("img").src = `small/${fisk.gsx$billede.$t}.jpg`;
     detalje.querySelector(".videre").addEventListener("click", () => {
         location.href = "nytvindu.html?id=" + fisk.gsx$id.$t;
 
