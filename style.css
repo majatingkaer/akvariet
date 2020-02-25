@@ -289,6 +289,12 @@
       /*** HEADER ***/
       #header {
           height: 45vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          /*          position: relative;*/
+
       }
 
       #header img {
@@ -325,6 +331,13 @@
 
       #web_menu {
           display: block;
+          position: sticky;
+
+          /*
+          position: absolute;
+          bottom: 0;
+          left: 30vw;
+*/
       }
 
       #mobile_menu {
@@ -340,15 +353,14 @@
           background-color: black;
           padding-top: 10px;
           padding-bottom: 10px;
+          /*          align-content: center;*/
+          text-align: center;
+          /*          margin-top: 20vw;*/
+          /*          bottom: 0;*/
+          z-index: 1;
+
       }
 
-      nav {
-          align-content: center;
-          text-align: center;
-          position: sticky;
-          top: 0;
-          z-index: 1;
-      }
 
       .line {
           border-left: 1px solid white;
