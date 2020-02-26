@@ -9,13 +9,11 @@
   body {
       background-color: black;
       margin: 0;
-
   }
 
 
   /*** HEADER ***/
   #header {
-
       background-image: url(gradient.svg);
       height: 40vh;
       padding-left: 40px;
