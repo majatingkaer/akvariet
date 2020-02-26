@@ -36,20 +36,21 @@
 
 
   h1 {
-      font-family: titling-gothic-fb-wide, sans-serif;
-      /*      font-family: 'Raleway', sans-serif;*/
-      font-weight: 400;
-      font-style: normal;
+      /*      font-family: titling-gothic-fb-wide, sans-serif;*/
+      font-family: 'Raleway', sans-serif;
+
+      font-weight: 900;
+      /*      font-style: black;*/
       color: white;
       font-size: 6vw;
       /*      padding-top: 20px;*/
-      /*      text-transform: uppercase;*/
+      text-transform: uppercase;
       margin-bottom: 0;
 
   }
 
   h3 {
-      font-family: 'Bad Script', sans-serif;
+      font-family: 'Zeyada', sans-serif;
       font-weight: 400;
       font-style: italic;
       color: whitesmoke;
@@ -307,7 +308,7 @@
 
       h1 {
 
-          font-weight: 400;
+          font-weight: 900;
 
           font-size: 3vw;
           padding-top: 1.6vw;
@@ -315,7 +316,9 @@
 
       }
 
-
+      h3 {
+          font-size: 2vw;
+      }
 
       p {
           color: whitesmoke;
