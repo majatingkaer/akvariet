@@ -15,15 +15,20 @@
 
   /*** HEADER ***/
   #header {
-      background: rgb(126, 190, 191);
-      background: radial-gradient(circle at top, rgba(126, 190, 191, 1) 0%, rgba(7, 33, 68, 1) 39%, rgba(0, 0, 0, 1) 68%);
-
 
       /*
-      background: rgb(0, 0, 0);
-      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 16%, rgba(25, 25, 93, 1) 45%, rgba(68, 153, 195, 1) 100%);
+      background: rgb(126, 190, 191);
+      background: radial-gradient(circle at top, rgba(126, 190, 191, 1) 0%, rgba(7, 33, 68, 1) 39%, rgba(0, 0, 0, 1) 68%);
 */
-      height: 30vh;
+
+
+
+      background-image: url(gradient.svg);
+
+
+
+
+      height: 40vh;
       padding-left: 40px;
       padding-right: 40px;
   }
@@ -276,10 +281,13 @@
 
       /*** HEADER ***/
       #header {
-          height: 80vh;
+          height: 60vh;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          background-size: cover;
+
+
 
           /*          position: relative;*/
 
