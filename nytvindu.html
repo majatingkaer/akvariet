@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Portræt akvariet</title>
     <link rel="stylesheet" href="https://use.typekit.net/bfj0cgy.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Raleway:400,900|Zeyada&display=swap" rel="stylesheet">
+
     <style>
         * {
             box-sizing: border-box;
@@ -43,16 +43,16 @@
 
 
         h1 {
-            font-family: titling-gothic-fb-wide, sans-serif;
-            font-weight: 400;
-            font-style: normal;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 900;
             color: white;
             font-size: 6vw;
-            padding-top: 20px;
+            text-transform: uppercase;
+            margin-bottom: 0;
         }
 
         h3 {
-            font-family: 'Bad Script', sans-serif;
+            font-family: 'Zeyada', sans-serif;
             font-weight: 400;
             font-style: italic;
             color: whitesmoke;
@@ -76,21 +76,11 @@
         }
 
         p {
-            font-family: titling-gothic-fb-narrow, sans-serif;
+            color: whitesmoke;
+            font-family: 'Raleway', sans-serif;
+            margin-left: 5vw;
             font-weight: 100;
             font-style: normal;
-            color: whitesmoke;
-            margin-left: 5vw;
-        }
-
-        h3 {
-            font-family: titling-gothic-fb-wide, sans-serif;
-            font-weight: 400;
-            font-style: italic;
-            color: whitesmoke;
-            font-size: 1rem;
-            text-align: center;
-            margin-top: 0;
         }
 
         .navn {
@@ -105,6 +95,20 @@
             max-width: 300vw;
             margin-left: 14vw;
         }
+
+
+        footer p {
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 40vw;
+            text-transform: uppercase;
+            line-height: 17px;
+        }
+
+
 
 
         @media only screen and (min-width:600px) {
@@ -124,20 +128,28 @@
             }
 
             #header {
-                height: 45vh;
+                height: 60vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-size: cover;
             }
 
             h1 {
-                font-family: titling-gothic-fb-wide, sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                color: white;
-                font-size: 2.5rem;
+                font-weight: 900;
+                font-size: 3vw;
+                padding-top: 1.6vw;
+                margin-bottom: 0;
+            }
+
+            h3 {
+                font-size: 2vw;
             }
 
             #header img {
-                padding-top: 3vw;
-                max-width: 180px;
+                padding: 2vw;
+                padding-top: 5vw;
+                max-width: 15vw;
             }
 
             #data-container img {
@@ -146,9 +158,11 @@
             }
 
             p {
-                font-family: titling-gothic-fb-narrow, sans-serif;
-                font-weight: 500;
                 color: whitesmoke;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 5vw;
+                font-weight: 100;
+                font-style: normal;
             }
 
             .navn {
@@ -159,8 +173,11 @@
                 margin-top: 10rem;
             }
 
-        }
+            footer p {
+                margin-top: 20vw;
+            }
 
+        }
     </style>
 </head>
 
@@ -235,9 +252,10 @@
                 history.back();
             })
         }
-
     </script>
 
-</body>
+    <footer>
+        <p>Portræt akvariet / Alle Gade 26, KLD. TH. / 5260 Odense S / info@portraetakvariet.dk / CVR: 40937X43</p>
+    </footer>
 
-</html>
+</body></html>
