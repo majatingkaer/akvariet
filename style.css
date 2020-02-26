@@ -279,11 +279,7 @@
           flex-direction: column;
           justify-content: space-between;
           background-size: cover;
-
-
-
           /*          position: relative;*/
-
       }
 
       #header img {
@@ -304,6 +300,16 @@
 
       p {
           color: whitesmoke;
+      }
+
+      h3 {
+          font-family: titling-gothic-fb-wide, sans-serif;
+          font-weight: 400;
+          font-style: italic;
+          color: whitesmoke;
+          font-size: 1rem;
+          text-align: center;
+          margin-top: 0;
       }
 
       button {
