@@ -16,19 +16,8 @@
   /*** HEADER ***/
   #header {
 
-      /*
-      background: rgb(126, 190, 191);
-      background: radial-gradient(circle at top, rgba(126, 190, 191, 1) 0%, rgba(7, 33, 68, 1) 39%, rgba(0, 0, 0, 1) 68%);
-*/
-
-
-
       background-image: url(gradient.svg);
-
-
-
-
-      height: 40vh;
+      height: 20vh;
       padding-left: 40px;
       padding-right: 40px;
   }
@@ -420,7 +409,11 @@
 
       #fisk_detalje h2 {
           font-size: 1.7rem;
-          margin-left: 2vw;
+          margin-left: 5vw;
+      }
+
+      #detalje .videre {
+          margin-bottom: 3vw;
       }
 
   }
