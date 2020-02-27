@@ -375,18 +375,18 @@
 
       /*** GRID ***/
       #data-container {
-          margin-top: 35px;
-          cursor: pointer;
+          margin-top: 35px; /*Der er 35 px til toppen fra det sted grid'et starter*/
+          cursor: pointer; /*Når man holder musen over noget i #data-container, laver musen en pointer, som indikerer, at det kan trykkes på*/
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(4, 1fr); /*Der er blevet etableret et grid og nu bestemmer vi, at der skal være 4 kolonner og de skal fylde 1 fraktion hver - altså de skal fylde lige meget hver*/
           max-width: 1200px;
           grid-gap: 2vw;
-          grid-auto-flow: dense;
+          grid-auto-flow: dense; /*Bruges ldit som et "beautify"-værktøj, så elementerne falder pænt på plads ved siden af hinanden*/
       }
 
       article:nth-child(3n) {
           grid-column: span 2;
-          grid-row: span 2;
+          grid-row: span 2;/*For at skabe liv i gridet, har vi bestemt, at hver 3. child i article-tagget, skal fylde 2 og ikke længere 1. Både 2 på row og 2 på column. Altså der kommer til at være to mindre billeder, der fylder det samme og så dette lidt strre billede, som fylder 2 gange ét af de mindre billeder.*/
       }
 
       #data-container article {
