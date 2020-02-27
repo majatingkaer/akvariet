@@ -1,5 +1,5 @@
 const link = "https://spreadsheets.google.com/feeds/list/1RvB2f2NnVM1-vxvO-tpdybufvkeX4DuF4jCgHjtVTJE/od6/public/values?alt=json"; //Dette er et link til vores spreadsheet med al information, vi har brug for at vise på sitet.
-let filter = "alle"; //Her har vi lavet en constant ved navn filter, som har valgt "alle" fra html-dokumentet.
+let filter; //Her har vi lavet en constant ved navn filter, som har valgt "alle" fra html-dokumentet.
 const container = document.querySelector("#data-container"); //Konstant som gør, at vi ikke hver gang vi skal have fat i #data-container, behøver at skrive en lang sætning, men kan nøjes med at skrive "container".
 const fiskTemplate = document.querySelector("template"); //Samme princip som "container" konstanten oppe over.
 
@@ -7,9 +7,19 @@ document.addEventListener("DOMContentLoaded", start);
 
 function start() {
     loadData();
-    klikBar(); //Disse to funktioner aktiveres, hvis de skal være tilgængelige.
-    document.querySelector("#menuknap").addEventListener("click", toggleMenu); //Når vi klikker på noget i vores id menuknap, skal vi gå videre til funktionen "toggleMenu", som er vores burgermenu.
 
+    document.querySelector("#menuknap").addEventListener("click", toggleMenu); //Når vi klikker på noget i vores id menuknap, skal vi gå videre til funktionen "toggleMenu", som er vores burgermenu.
+    let sessionfilter = sessionStorage.getItem("nyfilter");
+    console.log(sessionfilter);
+    if (sessionfilter) {
+        filter = sessionfilter;
+    } else {
+
+        filter = "alle";
+    }
+
+    console.log(sessionfilter);
+    klikBar(); //Disse to funktioner aktiveres, hvis de skal være tilgængelige.
 }
 
 // Venter til dataen fra Json filen er loadet før den går videre til visFisker.
@@ -58,12 +68,18 @@ function visFisker() {
 function klikBar() {
     document.querySelectorAll(".filter").forEach(elm => {
         elm.addEventListener("click", filtrering);
+        console.log("elm kat: ", elm.dataset.kategori);
+        console.log("filter", filter);
+        elm.classList.remove("valgt");
+        if (elm.dataset.kategori == filter) {
+            elm.classList.add("valgt");
+        }
     })
 }
 
 // Viser fiskene i et popup vindue
 function visDetalje(fisk) {
-    detalje.classList.remove("skjul");//Her fjerner vi klassen "skjul" fra detalje-id i html
+    detalje.classList.remove("skjul"); //Her fjerner vi klassen "skjul" fra detalje-id i html
     detalje.querySelector(".luk").addEventListener("click", () => detalje.classList.add("skjul")); //Hvis man klikker på den knap, som har classen "luk", tilføjes classen "skjul" igen - altså, at pop-up vinduet skjules.
     console.log("FISK", fisk.gsx$id.$t); // For at tjekke, om det virker, har vi console-log'et efter fiskens id.
     detalje.querySelector("h2").textContent = fisk.gsx$navn.$t; //I html har vi et tomt h2-tag, som nu udfyldes automatisk fra json med navn.
@@ -81,6 +97,7 @@ function filtrering() {
     document.querySelector("#menuknap").textContent = "☰";
     console.log("FILTER");
     filter = this.dataset.kategori;
+
     document.querySelectorAll(".filter").forEach(elementer => {
         elementer.classList.remove("valgt");
     })

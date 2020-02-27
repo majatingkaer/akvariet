@@ -268,7 +268,16 @@
             <h3>- Dyk ned i en verden fyldt med farver</h3>
         </div>
     </section>
-
+    <div id="web_menu">
+        <nav>
+            <button class="filter valgt" data-kategori="alle">ALLE</button>
+            <button class="filter line" data-kategori="blue">BLÅ</button>
+            <button class="filter line" data-kategori="orange">ORANGE</button>
+            <button class="filter line" data-kategori="white">HVID</button>
+            <button class="filter line" data-kategori="red">RØD</button>
+            <button class="filter line" data-kategori="andet">ANDRE</button>
+        </nav>
+    </div>
 
     <section id="data-container">
         <button>←</button>
@@ -292,6 +301,7 @@
 
         const link = "https://spreadsheets.google.com/feeds/list/1RvB2f2NnVM1-vxvO-tpdybufvkeX4DuF4jCgHjtVTJE/od6/public/values?alt=json";
         let fisk = [];
+        let filtercolor;
         const info = document.querySelector("#data-container");
 
         //   let filter = "alle";
@@ -302,7 +312,7 @@
 
         function start() {
             loadData();
-            //            klikBar();
+            klikBar();
 
         }
 
@@ -311,6 +321,13 @@
             fisk = await response.json();
             console.log(fisk);
             visFisk();
+        }
+
+        // Tilføjer eventlisteners til alle filter knappene så det er mulig at trykke på de.
+        function klikBar() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
         }
 
         function visFisk() {
@@ -326,7 +343,23 @@
             })
             info.querySelector("button").addEventListener("click", () => {
                 history.back();
+                //sessionStorage.setItem("nyfilter", "orange");
+
+
             })
+
+        }
+
+        // Filtrerer fiskene i kategorier
+        function filtrering() {
+
+            console.log("FILTER");
+            filtercolor = this.dataset.kategori;
+            sessionStorage.setItem("nyfilter", filtercolor);
+            history.back();
+            console.log(filtercolor);
+
+
         }
     </script>
 
