@@ -20,6 +20,10 @@
       padding-right: 40px;
   }
 
+  #top a {
+      text-decoration: none;
+  }
+
   #logo {
       display: flex;
       align-items: center;
@@ -352,7 +356,7 @@
       }
 
       .valgt {
-          background-color: rgba(20, 20, 101, 1);
+          background-color: #346173;
           color: white;
       }
 
