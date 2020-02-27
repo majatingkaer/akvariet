@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portræt akvariet</title>
     <link rel="stylesheet" href="https://use.typekit.net/bfj0cgy.css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Raleway:400,900|Zeyada&display=swap" rel="stylesheet">
@@ -28,12 +29,6 @@
             padding-right: 40px;
         }
 
-        #header img {
-            padding: 2vw;
-            padding-top: 5vw;
-            max-width: 120px;
-        }
-
         #logo {
             display: flex;
             align-items: center;
@@ -41,14 +36,23 @@
         }
 
 
+        #header img {
+            padding: 2vw;
+            padding-top: 5vw;
+            max-width: 120px;
+        }
+
+
 
         h1 {
+
             font-family: 'Raleway', sans-serif;
             font-weight: 900;
             color: white;
             font-size: 6vw;
             text-transform: uppercase;
             margin-bottom: 0;
+
         }
 
         h3 {
@@ -61,6 +65,7 @@
             margin-top: 0;
             font-style: italic;
         }
+
 
         button {
             background-color: black;
@@ -85,6 +90,8 @@
 
         .navn {
             font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0;
         }
 
         .fotograf {
@@ -93,7 +100,7 @@
 
         #data-container img {
             max-width: 300vw;
-            margin-left: 14vw;
+
         }
 
 
@@ -110,6 +117,13 @@
 
 
 
+        @media only screen and (min-width:500px) {
+            #header {
+
+                height: 52vh;
+
+            }
+        }
 
         @media only screen and (min-width:600px) {
             article {
@@ -128,7 +142,7 @@
             }
 
             #header {
-                height: 60vh;
+                height: 40vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -189,7 +203,7 @@
                 <img src="foto/LOGO.svg" alt="header">
                 <h1>PORTRÆT<br>AKVARIET</h1>
             </div>
-            <h3>Dyk ned i en verden fyldt med farver</h3>
+            <h3>- Dyk ned i en verden fyldt med farver</h3>
         </div>
     </section>
 

@@ -36,14 +36,11 @@
 
 
   h1 {
-      /*      font-family: titling-gothic-fb-wide, sans-serif;*/
-      font-family: 'Raleway', sans-serif;
 
+      font-family: 'Raleway', sans-serif;
       font-weight: 900;
-      /*      font-style: black;*/
       color: white;
       font-size: 6vw;
-      /*      padding-top: 20px;*/
       text-transform: uppercase;
       margin-bottom: 0;
 
@@ -276,14 +273,20 @@
 
 
 
+  @media only screen and (min-width:500px) {
+      #header {
 
+          height: 53vh;
+
+      }
+  }
 
 
   @media only screen and (min-width: 600px) {
 
       /*** HEADER ***/
       #header {
-          height: 60vh;
+          height: 40vh;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -334,6 +337,9 @@
           cursor: pointer;
       }
 
+      button:hover {
+          text-decoration: underline whitesmoke;
+      }
 
       /*** MENU ***/
 
@@ -439,4 +445,29 @@
           margin-bottom: 3vw;
       }
 
+  }
+
+
+  @media only screen and (min-width:768px) {
+      #header {
+
+          height: 35vh;
+
+      }
+  }
+
+  @media only screen and (min-width:1024px) {
+      #header {
+
+          height: 25vh;
+
+      }
+  }
+
+  @media only screen and (min-width:1200px) {
+      #header {
+
+          height: 80vh;
+
+      }
   }
