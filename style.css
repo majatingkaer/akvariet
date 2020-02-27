@@ -36,14 +36,11 @@
 
 
   h1 {
-      /*      font-family: titling-gothic-fb-wide, sans-serif;*/
-      font-family: 'Raleway', sans-serif;
 
+      font-family: 'Raleway', sans-serif;
       font-weight: 900;
-      /*      font-style: black;*/
       color: white;
       font-size: 6vw;
-      /*      padding-top: 20px;*/
       text-transform: uppercase;
       margin-bottom: 0;
 
@@ -214,6 +211,7 @@
       margin-left: 5vw;
       font-weight: 100;
       font-style: normal;
+      margin-bottom: 1px;
   }
 
 
@@ -282,7 +280,7 @@
 
       /*** HEADER ***/
       #header {
-          height: 60vh;
+          height: 40vh;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -290,30 +288,25 @@
           /*          position: relative;*/
       }
 
-      #header img {
-          padding-top: 3vw;
-          max-width: 25vw;
-      }
 
 
       #header img {
           padding: 2vw;
           padding-top: 5vw;
-          max-width: 15vw;
+          max-width: 30vw;
       }
 
 
 
       h1 {
           font-weight: 900;
-          font-size: 3vw;
-          padding-top: 1.6vw;
+          font-size: 7vw;
           margin-bottom: 0;
 
       }
 
       h3 {
-          font-size: 2vw;
+          font-size: 4vw;
       }
 
       p {
@@ -333,6 +326,9 @@
           cursor: pointer;
       }
 
+      button:hover {
+          text-decoration: underline whitesmoke;
+      }
 
       /*** MENU ***/
 
@@ -388,6 +384,10 @@
           grid-column: span 2;
           grid-row: span 2;/*For at skabe liv i gridet, har vi bestemt, at hver 3. child i article-tagget, skal fylde 2 og ikke længere 1. Både 2 på row og 2 på column. Altså der kommer til at være to mindre billeder, der fylder det samme og så dette lidt strre billede, som fylder 2 gange ét af de mindre billeder.*/
       }
+          margin-top: 35px;
+      }
+
+      cursor: pointer;
 
       #data-container article {
           transition: 0.8s;
@@ -438,4 +438,83 @@
           margin-bottom: 3vw;
       }
 
+  }
+
+
+  @media only screen and (min-width:768px) {
+      #data-container {
+          margin-top: 35px;
+          cursor: pointer;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          max-width: 1200px;
+          grid-gap: 2vw;
+          grid-auto-flow: dense;
+      }
+
+      article:nth-child(3n) {
+          grid-column: span 2;
+          grid-row: span 2;
+      }
+
+      #header {
+
+          height: 40vh;
+
+      }
+
+      #header img {
+          max-width: 27vw;
+      }
+
+      h1 {
+          font-size: 6vw;
+      }
+  }
+
+  @media only screen and (min-width:900px) {
+      #header {
+
+          height: 45vh;
+      }
+
+      #header img {
+          max-width: 20vw;
+      }
+
+      h1 {
+          font-size: 4vw;
+      }
+
+      h3 {
+          font-size: 3vw;
+      }
+
+  }
+
+  @media only screen and (min-width:1024px) {
+      #header {
+
+          height: 45vh;
+      }
+
+      #header img {
+          max-width: 18vw;
+      }
+
+      h1 {
+          padding-top: 10px;
+      }
+
+      h3 {
+          font-size: 2.5vw;
+      }
+  }
+
+  @media only screen and (min-width:1200px) {
+      #header {
+
+          height: 60vh;
+
+      }
   }
