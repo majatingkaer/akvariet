@@ -90,7 +90,7 @@
       width: 100%;
       left: 0;
       top: 0;
-      overflow-x: hidden;
+      /*      overflow-x: hidden;*/
       transition: 0.5s;
       opacity: 0.8;
       z-index: 100;
@@ -190,6 +190,7 @@
       font-weight: 100;
       font-style: normal;
       margin-bottom: 10vw;
+      margin-top: 0.3vw;
   }
 
 
@@ -284,6 +285,7 @@
           flex-direction: column;
           justify-content: space-between;
           background-size: cover;
+
           /*          position: relative;*/
       }
 
@@ -334,6 +336,9 @@
       #web_menu {
           display: block;
           position: sticky;
+          top: 0;
+          z-index: 1;
+
 
           /*
           position: absolute;
