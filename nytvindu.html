@@ -46,6 +46,40 @@
             max-width: 120px;
         }
 
+        /** MENU **/
+
+        nav {
+            background-color: black;
+            padding-top: 5vw;
+            padding-bottom: 10px;
+            /*          align-content: center;*/
+            text-align: center;
+            /*          margin-top: 20vw;*/
+            /*          bottom: 0;*/
+            z-index: 1;
+
+        }
+
+
+        .line {
+            border-left: 1px solid white;
+        }
+
+        button {
+
+            font-weight: 100;
+            font-style: normal;
+            color: whitesmoke;
+            background-color: black;
+            font-size: 1.4rem;
+            border: 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            text-decoration: underline whitesmoke;
+        }
+
 
 
         h1 {
@@ -71,7 +105,7 @@
         }
 
 
-        button {
+        .back {
             background-color: black;
             color: white;
             border: none;
@@ -288,7 +322,7 @@
     </div>
 
     <section id="data-container">
-        <button>←</button>
+        <button class="back">←</button>
         <article>
             <div class=foto>
                 <img src="" alt="">
