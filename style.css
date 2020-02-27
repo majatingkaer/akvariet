@@ -74,7 +74,6 @@
       padding-bottom: 10px;
   }
 
-
   #data-container {
 
       display: grid;
@@ -87,7 +86,6 @@
 
 
   /*** burger start ***/
-
 
   .overlay_menu {
       position: fixed;

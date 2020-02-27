@@ -12,6 +12,7 @@ function start() {
 
 }
 
+// Venter til dataen fra Json filen er loadet før den går videre til visFisker.
 async function loadData() {
     const response = await fetch(link);
     fisker = await response.json();
@@ -19,6 +20,7 @@ async function loadData() {
     visFisker();
 }
 
+// Burgermenu:
 function toggleMenu() {
     console.log("toggleMenu");
     document.querySelector("#menu").classList.toggle("hidden");
@@ -35,11 +37,7 @@ function toggleMenu() {
     //    document.querySelector(".filter").addEventListener("click", hideMenu);
 }
 
-//function hideMenu() {
-//    console.log("hideMenu");
-//    document.querySelector("#menu").classList.toggle("hidden");
-//}
-
+// Henter data (billede og anden information) fra Json filen. Sætter ind indholdet i HTML elementene img og article.
 function visFisker() {
     container.innerHTML = "";
 
@@ -56,12 +54,14 @@ function visFisker() {
     })
 }
 
+// Tilføjer eventlisteners til alle filter knappene så det er mulig at trykke på de.
 function klikBar() {
     document.querySelectorAll(".filter").forEach(elm => {
         elm.addEventListener("click", filtrering);
     })
 }
 
+// Viser fiskene i et popup vindu
 function visDetalje(fisk) {
     detalje.classList.remove("skjul");
     detalje.querySelector("button").addEventListener("click", () => detalje.classList.add("skjul"));
@@ -76,6 +76,7 @@ function visDetalje(fisk) {
     //  container.appendChild(klon);
 }
 
+// Filtrerer fiskene i kategorier
 function filtrering() {
     document.querySelector("#menu").classList.add("hidden");
     document.querySelector("#menu").classList.remove("overlay_menu");
@@ -90,6 +91,3 @@ function filtrering() {
     //    document.querySelector("#menu").classList.add("hidden");
     visFisker();
 }
-//const endpoint = "";
-//
-//let oversigt = [];
