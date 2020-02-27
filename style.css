@@ -273,13 +273,7 @@
 
 
 
-  @media only screen and (min-width:500px) {
-      #header {
 
-          height: 53vh;
-
-      }
-  }
 
 
   @media only screen and (min-width: 600px) {
@@ -294,30 +288,25 @@
           /*          position: relative;*/
       }
 
-      #header img {
-          padding-top: 3vw;
-          max-width: 25vw;
-      }
 
 
       #header img {
           padding: 2vw;
           padding-top: 5vw;
-          max-width: 15vw;
+          max-width: 30vw;
       }
 
 
 
       h1 {
           font-weight: 900;
-          font-size: 3vw;
-          padding-top: 1.6vw;
+          font-size: 7vw;
           margin-bottom: 0;
 
       }
 
       h3 {
-          font-size: 2vw;
+          font-size: 4vw;
       }
 
       p {
@@ -383,18 +372,9 @@
       /*** GRID ***/
       #data-container {
           margin-top: 35px;
-          cursor: pointer;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          max-width: 1200px;
-          grid-gap: 2vw;
-          grid-auto-flow: dense;
       }
 
-      article:nth-child(3n) {
-          grid-column: span 2;
-          grid-row: span 2;
-      }
+      cursor: pointer;
 
       #data-container article {
           transition: 0.8s;
@@ -449,25 +429,79 @@
 
 
   @media only screen and (min-width:768px) {
+      #data-container {
+          margin-top: 35px;
+          cursor: pointer;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          max-width: 1200px;
+          grid-gap: 2vw;
+          grid-auto-flow: dense;
+      }
+
+      article:nth-child(3n) {
+          grid-column: span 2;
+          grid-row: span 2;
+      }
+
       #header {
 
-          height: 35vh;
+          height: 40vh;
 
       }
+
+      #header img {
+          max-width: 27vw;
+      }
+
+      h1 {
+          font-size: 6vw;
+      }
+  }
+
+  @media only screen and (min-width:900px) {
+      #header {
+
+          height: 45vh;
+      }
+
+      #header img {
+          max-width: 20vw;
+      }
+
+      h1 {
+          font-size: 4vw;
+      }
+
+      h3 {
+          font-size: 3vw;
+      }
+
   }
 
   @media only screen and (min-width:1024px) {
       #header {
 
-          height: 25vh;
+          height: 45vh;
+      }
 
+      #header img {
+          max-width: 18vw;
+      }
+
+      h1 {
+          padding-top: 10px;
+      }
+
+      h3 {
+          font-size: 2.5vw;
       }
   }
 
   @media only screen and (min-width:1200px) {
       #header {
 
-          height: 80vh;
+          height: 60vh;
 
       }
   }
